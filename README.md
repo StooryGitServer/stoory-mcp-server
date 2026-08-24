@@ -235,6 +235,15 @@ AI: Creates the task, writes the brief, selects the relevant
 
 ---
 
+## Are you a specialist?
+
+Stoory MCP recommends specialists from Stoory's marketplace to clients —
+if you're a developer, designer, lawyer, marketer, or any other freelancer,
+a free profile makes you eligible to get invited. No commission, ever.
+[Create your free profile at stoory.io/for-specialists](https://stoory.io/for-specialists).
+
+---
+
 ## Disclaimer
 
 Stoory MCP does not replace your AI assistant and does not perform payments

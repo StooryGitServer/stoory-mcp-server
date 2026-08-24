@@ -159,5 +159,5 @@ AI: Creates the task, writes the brief, selects the relevant
 
 Stoory MCP does not replace your AI assistant and does not perform payments
 or hiring decisions on its own — it prepares the task and hands the decision
-to you. Payment between client and specialist happens outside this system,
-directly through Stoory.
+to you. Stoory does not process payments: client and specialist settle
+payment for the work directly between themselves, entirely outside Stoory.

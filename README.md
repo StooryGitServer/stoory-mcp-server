@@ -1,6 +1,6 @@
 # Stoory MCP Server
 
-**Hire a human specialist from your AI workspace — without leaving Claude Code.**
+**Hire a human specialist from your AI workspace — without leaving it.**
 
 AI can build most of your app. It can't get you GDPR-compliant, review your
 Stripe integration, design your landing page, or run your SEO. Stoory MCP lets
@@ -33,8 +33,8 @@ See [Tools](#tools) below for the full list.
 
 ### Requirements
 
-- An AI client that supports MCP over Streamable HTTP (Claude Code, Claude
-  Desktop, Cursor, ...).
+- Any AI client that supports MCP over Streamable HTTP (Claude Code, Claude
+  Desktop, Cursor, Windsurf, VS Code, ...).
 - A free Stoory client account and API key (below).
 
 ### 1. Get a client API key
@@ -46,30 +46,33 @@ then open **MCP Server** on the Stoory homepage to generate your
 
 ### 2. Add the server to your AI client
 
+Most MCP clients (Claude Desktop, Cursor, Windsurf, VS Code, ...) use the same
+config shape:
+
 ```json
 {
   "mcpServers": {
     "stoory": {
       "url": "https://mcp.stoory.io/mcp",
       "headers": {
-        "x-client-api-key": "YOUR_API_KEY_HERE"
+        "x-api-key": "YOUR_API_KEY_HERE"
       }
     }
   }
 }
 ```
 
-Claude Code CLI:
+Using Claude Code, you can instead run:
 
 ```bash
 claude mcp add --transport http stoory \
   https://mcp.stoory.io/mcp \
-  --header "x-client-api-key: YOUR_API_KEY_HERE"
+  --header "x-api-key: YOUR_API_KEY_HERE"
 ```
 
 ### 3. Ask for help
 
-> "Claude keeps breaking my Stripe integration. Find me someone who can fix it."
+> "My AI assistant keeps breaking my Stripe integration. Find me someone who can fix it."
 
 That's it — the assistant searches, drafts the task, shows you cost and
 files before anything is sent, and waits for your go-ahead.
@@ -130,16 +133,16 @@ human help.**
 ## Example
 
 ```
-User: "I've built my SaaS with Claude Code. I need a privacy policy
+User: "I've built my SaaS with AI. I need a privacy policy
        and terms of service before I can launch."
 
-Claude: 5 relevant specialists found.
+AI: 5 relevant specialists found.
 
 User: "Use #2, budget $200."
 
-Claude: Creates the task, writes the brief, selects the relevant
-        project files, opens a private repo, and shares it with
-        the specialist. Done.
+AI: Creates the task, writes the brief, selects the relevant
+    project files, opens a private repo, and shares it with
+    the specialist. Done.
 ```
 
 ---
@@ -158,4 +161,3 @@ Stoory MCP does not replace your AI assistant and does not perform payments
 or hiring decisions on its own — it prepares the task and hands the decision
 to you. Payment between client and specialist happens outside this system,
 directly through Stoory.
-```
